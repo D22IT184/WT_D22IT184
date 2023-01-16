@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="tablegen">
+        <label>Rows: <input type="text" name="rows" id="rows" /></label><br />
+        <input name="generate" type="button" value="Create Table!" onclick='createTable();' />
+        <p id="p" style="font-size: 70px;"></p>
+    </form>
+    <div id="wrapper"></div>
+    <script type="text/javascript">
+        function createTable() {
+            var p = document.getElementById('p');
+            let r = document.getElementById('rows').value;
+            let str = '';
+            for (let i = 1; i <= 10; i++) {
+                str = str + r + ' ' + i +' '+ r*i + "<br>";
+            }
+            // document.write(str)
+            p.innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>
