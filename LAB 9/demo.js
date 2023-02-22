@@ -34,6 +34,8 @@ let studentArr = [
 ]
 
 
-let a  = studentArr.forEach(function(s,i){
-    console.log()
+let a  = studentArr.forEach(function(student,i){
+    console.log(
+        `at index ${i} we have ${student.name} and length is ${student.name.length}`
+    )
 })
